@@ -4,8 +4,8 @@ const imageExtension = "png"; // Extension of your image files
 const imageCount = 120; // Number of images you have
 const imageCount1 = 300; // Number of images you have
 
-const videoToalha = document.getElementById("onGoing");
-const videoGuisado = document.getElementById("bolo");
+const videoToalha = document.getElementById("image");
+const videoBolo = document.getElementById("bolo");
 
 // Function to preload images
 function preloadImages() {
@@ -53,7 +53,7 @@ function updateReceitas() {
   let incrementing = true;
 
   function changeImage() {
-    videoBolo.src = `${guisado}${currentImageIndex
+    videoBolo.src = `${bolo}${currentImageIndex
       .toString()
       .padStart(4, "0")}.${imageExtension}`;
     if (incrementing) {
