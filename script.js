@@ -1,7 +1,7 @@
 const onGoing = "./images/onGoing/";
 const imageExtension = "png"; // Extension of your image files
 const imageCount2 = 248; // Number of images you have
-let currentImageIndex = 52;
+let currentImageIndex = 50;
 let first = true;
 
 const videoInicial = document.getElementById("onGoing");
