@@ -31,3 +31,10 @@ body {
 #logo {
   width: 500px;
 }
+
+#recipeImage {
+  position: absolute;
+  bottom: 50px;
+  left: 100px;
+  z-index: 9999;
+}
