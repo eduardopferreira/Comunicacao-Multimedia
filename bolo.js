@@ -37,7 +37,7 @@ function updateBackground() {
       }
     } else {
       currentImageIndex--;
-      if (currentImageIndex === 0) {
+      if (currentImageIndex === 1) {
         incrementing = true;
       }
     }
@@ -59,12 +59,7 @@ function updateReceitas() {
     if (incrementing) {
       currentImageIndex++;
       if (currentImageIndex === imageCount1) {
-        incrementing = false;
-      }
-    } else {
-      currentImageIndex--;
-      if (currentImageIndex === 0) {
-        incrementing = true;
+        currentImageIndex = 1;
       }
     }
   }
