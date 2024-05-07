@@ -54,7 +54,7 @@ body {
 
 #recipeImage {
   position: absolute;
-  bottom: 0px;
+  bottom: 5%;
   left: 100px;
   z-index: 9999;
 }

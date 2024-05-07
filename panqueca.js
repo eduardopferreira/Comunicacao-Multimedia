@@ -1,11 +1,11 @@
 const recipeDisplay = "./images/recipeDisplay/"; // Path to your images folder
-const guisado = "./images/guisado/";
+const panqueca = "./images/panqueca/";
 const imageExtension = "png"; // Extension of your image files
 const imageCount = 120; // Number of images you have
 const imageCount1 = 300; // Number of images you have
 
 const videoToalha = document.getElementById("onGoing");
-const videoGuisado = document.getElementById("panqueca");
+const videoPanqueca = document.getElementById("panqueca");
 
 // Function to preload images
 function preloadImages() {
