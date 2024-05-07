@@ -22,7 +22,7 @@ function preloadImages() {
 }
 
 function updateBackground() {
-  let currentImageIndex = 0;
+  let currentImageIndex = 1;
   let incrementing = true;
 
   function changeImage() {
