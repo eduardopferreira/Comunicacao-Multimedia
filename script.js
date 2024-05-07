@@ -27,12 +27,13 @@ function updateOnGoing() {
       if (currentImageIndex === imageCount2) {
         incrementing = false;
       }
-    } //else {
-    //   currentImageIndex--;
-    //   if (currentImageIndex === 52) {
-    //     incrementing = true;
-    //   }
-    // }
+    } else {
+      currentImageIndex--;
+      if (currentImageIndex === 240) {
+        // Assuming you want to loop back to the 50th image
+        incrementing = true;
+      }
+    }
   }
   changeImage();
 
