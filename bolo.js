@@ -85,20 +85,6 @@ function updateReceitas() {
   // Set an interval to change images
   //setInterval(changeImage, 10); // Change image every 100 milliseconds
 
-  // Add event listeners for left and right clicks
-  videoBolo.addEventListener("click", function (event) {
-    const rect = videoBolo.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const videoWidth = rect.width;
-    const halfVideoWidth = videoWidth / 2;
-
-    if (clickX < halfVideoWidth) {
-      spinDirection = "left";
-    } else {
-      spinDirection = "right";
-    }
-  });
-
   // Function to update the spin direction
   function updateSpinDirection() {
     if (spinDirection === "left") {
@@ -130,5 +116,5 @@ function updateReceitas() {
 }
 
 // Start updating the video with images
-updateBackground();
+//updateBackground();
 updateReceitas();
