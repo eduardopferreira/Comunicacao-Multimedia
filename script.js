@@ -6,6 +6,14 @@ let first = true;
 
 const videoInicial = document.getElementById("onGoing");
 
+const music = document.getElementById("musica");
+music.volume = 1;
+
+document.addEventListener("click", () => {
+  console.log("scrolling1");
+  music.play();
+});
+
 // Function to preload images
 function preloadImages() {
   for (let i = 1; i <= imageCount2; i++) {
@@ -36,7 +44,6 @@ function updateOnGoing() {
     }
   }
   changeImage();
-
   // Set an interval to change images
   setInterval(changeImage, 50); // Change image every 100 milliseconds
 }
@@ -49,5 +56,4 @@ onscroll = function () {
     updateOnGoing();
     first = false;
   }
-  console.log("scrolling");
 };
