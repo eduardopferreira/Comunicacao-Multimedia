@@ -53,35 +53,38 @@ function updateReceitas() {
   let incrementing = true;
   let spinDirection = "right"; // Default spin direction
 
-  function changeImage() {
-    videoOnigiri.src = `${onigiri}${currentImageIndex
-      .toString()
-      .padStart(4, "0")}.${imageExtension}`;
-    if (incrementing) {
-      currentImageIndex++;
-      if (currentImageIndex === imageCount1) {
-        currentImageIndex = 1;
+  const recipeOnigiri = document.getElementById("recipeOnigiri");
+  var ispressing = false;
+  var originalmouseX;
+  var originalmouseY;
+
+  recipeOnigiri.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+    originalmouseX = event.clientX;
+    originalmouseY = event.clientY;
+    ispressing = true;
+  });
+
+  recipeOnigiri.addEventListener("mousemove", (event) => {
+    if (ispressing) {
+      var mouseX = event.clientX;
+      var mouseY = event.clientY;
+      if (mouseX > originalmouseX) {
+        spinDirection = "right";
+      } else if (mouseX < originalmouseX) {
+        spinDirection = "left";
       }
+      originalmouseX = event.clientX;
+      originalmouseY = event.clientY;
     }
-  }
+  });
+
+  recipeOnigiri.addEventListener("mouseup", (event) => {
+    ispressing = false;
+  });
 
   // Set an interval to change images
   //setInterval(changeImage, 10); // Change image every 100 milliseconds
-
-  // Add event listeners for left and right clicks
-  videoOnigiri.addEventListener("click", function (event) {
-    const rect = videoOnigiri.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const videoWidth = rect.width;
-    const halfVideoWidth = videoWidth / 2;
-
-    if (clickX < halfVideoWidth) {
-      spinDirection = "left";
-      
-    } else {
-      spinDirection = "right";
-    }
-  });
 
   // Function to update the spin direction
   function updateSpinDirection() {
@@ -90,7 +93,6 @@ function updateReceitas() {
         .toString()
         .padStart(4, "0")}.${imageExtension}`;
       if (incrementing) {
-        
         currentImageIndex--;
         if (currentImageIndex === 0) {
           currentImageIndex = imageCount1 - 1;

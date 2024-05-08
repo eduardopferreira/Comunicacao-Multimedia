@@ -116,5 +116,5 @@ function updateReceitas() {
 }
 
 // Start updating the video with images
-//updateBackground();
+updateBackground();
 updateReceitas();

@@ -53,34 +53,38 @@ function updateReceitas() {
   let incrementing = true;
   let spinDirection = "right"; // Default spin direction
 
-  function changeImage() {
-    videoGuisado.src = `${guisado}${currentImageIndex
-      .toString()
-      .padStart(4, "0")}.${imageExtension}`;
-    if (incrementing) {
-      currentImageIndex++;
-      if (currentImageIndex === imageCount1) {
-        currentImageIndex = 1;
+  const recipeGuisado = document.getElementById("recipeGuisado");
+  var ispressing = false;
+  var originalmouseX;
+  var originalmouseY;
+
+  recipeGuisado.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+    originalmouseX = event.clientX;
+    originalmouseY = event.clientY;
+    ispressing = true;
+  });
+
+  recipeGuisado.addEventListener("mousemove", (event) => {
+    if (ispressing) {
+      var mouseX = event.clientX;
+      var mouseY = event.clientY;
+      if (mouseX > originalmouseX) {
+        spinDirection = "right";
+      } else if (mouseX < originalmouseX) {
+        spinDirection = "left";
       }
+      originalmouseX = event.clientX;
+      originalmouseY = event.clientY;
     }
-  }
+  });
+
+  recipeGuisado.addEventListener("mouseup", (event) => {
+    ispressing = false;
+  });
 
   // Set an interval to change images
   //setInterval(changeImage, 10); // Change image every 100 milliseconds
-
-  // Add event listeners for left and right clicks
-  videoGuisado.addEventListener("click", function (event) {
-    const rect = videoGuisado.getBoundingClientRect();
-    const clickX = event.clientX - rect.left;
-    const videoWidth = rect.width;
-    const halfVideoWidth = videoWidth / 2;
-
-    if (clickX < halfVideoWidth) {
-      spinDirection = "left";
-    } else {
-      spinDirection = "right";
-    }
-  });
 
   // Function to update the spin direction
   function updateSpinDirection() {
