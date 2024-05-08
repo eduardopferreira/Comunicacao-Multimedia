@@ -3,7 +3,6 @@ const bolo = "./images/bolo/";
 const imageExtension = "png"; // Extension of your image files
 const imageCount = 120; // Number of images you have
 const imageCount1 = 300; // Number of images you have
-
 const videoToalha = document.getElementById("image");
 const videoBolo = document.getElementById("bolo");
 
@@ -53,17 +52,35 @@ function updateReceitas() {
   let incrementing = true;
   let spinDirection = "right"; // Default spin direction
 
-  function changeImage() {
-    videoBolo.src = `${bolo}${currentImageIndex
-      .toString()
-      .padStart(4, "0")}.${imageExtension}`;
-    if (incrementing) {
-      currentImageIndex++;
-      if (currentImageIndex === imageCount1) {
-        currentImageIndex = 1;
+  const recipeBolo = document.getElementById("recipeBolo");
+  var ispressing = false;
+  var originalmouseX;
+  var originalmouseY;
+
+  recipeBolo.addEventListener("mousedown", (event) => {
+    event.preventDefault();
+    originalmouseX = event.clientX;
+    originalmouseY = event.clientY;
+    ispressing = true;
+  });
+
+  recipeBolo.addEventListener("mousemove", (event) => {
+    if (ispressing) {
+      var mouseX = event.clientX;
+      var mouseY = event.clientY;
+      if (mouseX > originalmouseX) {
+        spinDirection = "right";
+      } else if (mouseX < originalmouseX) {
+        spinDirection = "left";
       }
+      originalmouseX = event.clientX;
+      originalmouseY = event.clientY;
     }
-  }
+  });
+
+  recipeBolo.addEventListener("mouseup", (event) => {
+    ispressing = false;
+  });
 
   // Set an interval to change images
   //setInterval(changeImage, 10); // Change image every 100 milliseconds
@@ -77,7 +94,6 @@ function updateReceitas() {
 
     if (clickX < halfVideoWidth) {
       spinDirection = "left";
-      
     } else {
       spinDirection = "right";
     }
@@ -90,7 +106,6 @@ function updateReceitas() {
         .toString()
         .padStart(4, "0")}.${imageExtension}`;
       if (incrementing) {
-        
         currentImageIndex--;
         if (currentImageIndex === 0) {
           currentImageIndex = imageCount1 - 1;
