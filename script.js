@@ -1,6 +1,6 @@
 const onGoing = "./images/onGoing/";
 const imageExtension = "png"; // Extension of your image files
-const imageCount2 = 248; // Number of images you have
+const imageCount2 = 309; // Number of images you have
 let currentImageIndex = 50;
 let first = true;
 

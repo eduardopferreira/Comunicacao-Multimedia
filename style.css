@@ -66,7 +66,7 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  top: 500px;
+  top: 480px;
   left: 360px;
   opacity: 0%;
   z-index: 9999;
@@ -83,7 +83,7 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  top: 620px;
+  top: 600px;
   left: 300px;
   opacity: 0%;
   z-index: 9999;
@@ -100,7 +100,7 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  top: 640px;
+  top: 620px;
   left: 530px;
   opacity: 0%;
   z-index: 9999;
@@ -117,7 +117,7 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  top: 560px;
+  top: 540px;
   left: 720px;
   opacity: 0%;
   z-index: 9999;
@@ -134,7 +134,7 @@ body {
   font-size: 16px;
   margin: 4px 2px;
   cursor: pointer;
-  top: 620px;
+  top: 600px;
   left: 900px;
   opacity: 0%;
   z-index: 9999;
