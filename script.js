@@ -7,10 +7,10 @@ let first = true;
 const videoInicial = document.getElementById("onGoing");
 
 const music = document.getElementById("musica");
-music.volume = 1;
+music.volume = 0.3;
 
-document.addEventListener("click", () => {
-  console.log("scrolling1");
+document.addEventListener("scroll", () => {
+  console.log("scrolling");
   music.play();
 });
 
