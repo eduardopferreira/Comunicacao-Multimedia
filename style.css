@@ -173,6 +173,13 @@ body {
   z-index: 2;
 }
 
+#recipeRamen {
+  position: absolute;
+  bottom: 12%;
+  left: 100px;
+  z-index: 2;
+}
+
 #recipePanqueca {
   position: absolute;
   bottom: 0%;
@@ -193,6 +200,10 @@ body {
 
 #panqueca {
   scale: 1.1;
+}
+
+#ramen {
+  scale: 1.8;
 }
 
 #onigiri {
