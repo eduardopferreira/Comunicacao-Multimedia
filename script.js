@@ -22,6 +22,9 @@ function preloadImages() {
   }
 }
 
+const initialText = document.getElementById("initialText");
+initialText.style.display = "none"; // Hide the text initially
+
 function updateOnGoing() {
   let incrementing = true;
 
@@ -32,6 +35,9 @@ function updateOnGoing() {
 
     if (incrementing) {
       currentImageIndex++;
+      if (currentImageIndex === 220) {
+        initialText.style.display = "block"; // Show the text when currentImageIndex is 240
+      }
       if (currentImageIndex === imageCount2) {
         incrementing = false;
       }
