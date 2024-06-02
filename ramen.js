@@ -1,8 +1,9 @@
 const recipeDisplay = "./images/recipeDisplay/"; // Path to your images folder
 const ramen = "./images/ramen/";
 const imageExtension = "png"; // Extension of your image files
-const imageCount = 120; // Number of images you have
+const imageCount = 239; // Number of images you have
 const imageCount1 = 300; // Number of images you have
+
 const videoToalha = document.getElementById("image");
 const videoRamen = document.getElementById("ramen");
 

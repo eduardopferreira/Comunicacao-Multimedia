@@ -8,11 +8,6 @@
   src: url(./fonts/Inter-Regular.ttf);
 }
 
-@font-face {
-  font-family: "initialFont";
-  src: url(./fonts/Inter-Medium.ttf);
-}
-
 @keyframes fadeIn {
   to {
     opacity: 1;
@@ -69,15 +64,15 @@ body {
 }
 
 #initialText {
-  font-family: "initialFont";
+  font-family: "textFont";
   font-size: 18px;
   opacity: 0;
   animation: fadeIn 4s forwards;
   color: white;
   position: absolute;
-  top: 50px;
-  left: 50px;
-  right: 720px;
+  top: 150px;
+  left: 1120px;
+  right: 50px;
   z-index: 9999;
 }
 
