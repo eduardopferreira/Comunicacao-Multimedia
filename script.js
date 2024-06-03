@@ -25,6 +25,9 @@ function preloadImages() {
 const initialText = document.getElementById("initialText");
 initialText.style.display = "none"; // Hide the text initially
 
+const sombra = document.getElementById("sombra");
+sombra.style.display = "none"; // Hide the shadow initially
+
 function updateOnGoing() {
   let incrementing = true;
 
@@ -37,6 +40,7 @@ function updateOnGoing() {
       currentImageIndex++;
       if (currentImageIndex === 220) {
         initialText.style.display = "block"; // Show the text when currentImageIndex is 240
+        sombra.style.display = "block"; // Show the text when currentImageIndex is 240
       }
       if (currentImageIndex === imageCount2) {
         incrementing = false;

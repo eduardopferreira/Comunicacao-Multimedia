@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 9999;
+  z-index: 10001;
 }
 
 #initialText {
@@ -73,7 +73,17 @@ body {
   top: 150px;
   left: 1120px;
   right: 50px;
-  z-index: 9999;
+  z-index: 10001;
+}
+
+#sombra {
+  opacity: 0;
+  animation: fadeIn 4s forwards;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100vh;
+  z-index: 10000;
 }
 
 .button {
@@ -90,7 +100,7 @@ body {
   top: 480px;
   left: 360px;
   opacity: 0%;
-  z-index: 9999;
+  z-index: 10002;
 }
 
 .button1 {
@@ -107,7 +117,7 @@ body {
   top: 600px;
   left: 300px;
   opacity: 0%;
-  z-index: 9999;
+  z-index: 10002;
 }
 
 .button2 {
@@ -124,7 +134,7 @@ body {
   top: 620px;
   left: 530px;
   opacity: 0%;
-  z-index: 9999;
+  z-index: 10002;
 }
 
 .button3 {
@@ -141,7 +151,7 @@ body {
   top: 540px;
   left: 720px;
   opacity: 0%;
-  z-index: 9999;
+  z-index: 10002;
 }
 
 .button4 {
@@ -158,7 +168,7 @@ body {
   top: 600px;
   left: 900px;
   opacity: 0%;
-  z-index: 9999;
+  z-index: 10002;
 }
 
 #logo {
