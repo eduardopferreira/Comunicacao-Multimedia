@@ -7,6 +7,14 @@ const imageCount1 = 300; // Number of images you have
 const videoToalha = document.getElementById("image");
 const videoBolo = document.getElementById("bolo");
 
+const music = document.getElementById("musica1");
+music.volume = 0.3;
+
+document.addEventListener("click", () => {
+  console.log("scrolling");
+  music.play();
+});
+
 // Function to preload images
 function preloadImages() {
   for (let i = 1; i <= imageCount; i++) {
