@@ -68,7 +68,7 @@ body {
   text-align: right;
   font-size: 16px;
   opacity: 0;
-  animation: fadeIn 4s forwards;
+  animation: fadeIn 2s forwards;
   color: white;
   position: absolute;
   bottom: 150px;
@@ -89,7 +89,7 @@ body {
 
 #sombra {
   opacity: 0;
-  animation: fadeIn 4s forwards;
+  animation: fadeIn 2s forwards;
   position: absolute;
   top: 0px;
   right: 0px;
