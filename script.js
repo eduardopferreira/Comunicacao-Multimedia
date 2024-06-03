@@ -24,10 +24,10 @@ function preloadImages() {
 
 const logo = document.getElementById("logo");
 
-logo.addEventListener("mouseout", () => {
-  initialText.style.display = "none"; // Hide the text initially
-  sombra.style.display = "none"; // Hide the shadow initially
-});
+// logo.addEventListener("mouseout", () => {
+//   initialText.style.display = "none"; // Hide the text initially
+//   sombra.style.display = "none"; // Hide the shadow initially
+// });
 
 const initialText = document.getElementById("initialText");
 initialText.style.display = "none"; // Hide the text initially
@@ -36,6 +36,7 @@ const sombra = document.getElementById("sombra");
 sombra.style.display = "none"; // Hide the shadow initially
 
 const fadeInText = document.querySelector(".fade-in-text");
+fadeInText.style.display = "none"; // Hide the text initially
 
 function updateOnGoing() {
   let incrementing = true;
@@ -48,9 +49,32 @@ function updateOnGoing() {
     if (incrementing) {
       currentImageIndex++;
       if (currentImageIndex === 220) {
+        fadeInText.style.display = "block"; // Show the text when currentImageIndex is 240
         logo.addEventListener("mouseover", () => {
-          initialText.style.display = "block"; // Show the text when currentImageIndex is 240
-          sombra.style.display = "block"; // Show the text when currentImageIndex is 240
+          initialText.style.display = "block"; // Show the text when mouse is over the logo
+          sombra.style.display = "block"; // Show the shadow when mouse is over the logo
+          
+          // Reset the animation by removing and re-adding the class
+          initialText.style.animation = "none";
+          sombra.style.animation = "none";
+          
+          // Use setTimeout to ensure the animation properties are reset
+          setTimeout(() => {
+            initialText.style.animation = "fadeIn 2s forwards";
+            sombra.style.animation = "fadeIn 2s forwards";
+          }, 10); // A short delay to reset the animation
+        });
+        
+        logo.addEventListener("mouseout", () => {
+          // Trigger the fade-out animation
+          initialText.style.animation = "fadeOut 2s forwards";
+          sombra.style.animation = "fadeOut 2s forwards";
+          
+          // Set a timeout to hide the elements after the fade-out animation completes
+          setTimeout(() => {
+            initialText.style.display = "none";
+            sombra.style.display = "none";
+          }, 2000); // Match the duration of the fade-out animation (2s)
         });
       }
       if (currentImageIndex === imageCount2) {
