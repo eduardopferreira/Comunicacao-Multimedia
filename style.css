@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 10001;
+  z-index: 10002;
 }
 
 #initialText {
@@ -73,6 +73,16 @@ body {
   top: 150px;
   left: 1120px;
   right: 50px;
+  z-index: 10002;
+}
+
+#noise {
+  object-fit: cover;
+  position: absolute;
+  width: 100vw;
+  height: calc(100vh + 1px);
+  top: 0px;
+  left: 0px;
   z-index: 10001;
 }
 
@@ -245,14 +255,6 @@ body {
 
 #title {
   font-family: "ghibliFont";
-}
-
-#noise {
-  object-fit: cover;
-  width: 100vw;
-  height: calc(100vh + 1px);
-  position: fixed;
-  z-index: 9999;
 }
 
 .arrow {
