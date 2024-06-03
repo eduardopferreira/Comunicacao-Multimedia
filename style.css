@@ -60,7 +60,7 @@ body {
   position: absolute;
   top: 50px;
   right: 50px;
-  z-index: 10002;
+  z-index: 10003;
 }
 
 #initialText {
@@ -89,6 +89,14 @@ body {
 #sombra {
   opacity: 0;
   animation: fadeIn 4s forwards;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  height: 100vh;
+  z-index: 10000;
+}
+
+#sombraReceitas {
   position: absolute;
   top: 0px;
   right: 0px;
@@ -202,35 +210,35 @@ body {
   position: absolute;
   bottom: 12%;
   left: 100px;
-  z-index: 2;
+  z-index: 10002;
 }
 
 #recipeGuisado {
   position: absolute;
   bottom: 15%;
   left: 100px;
-  z-index: 2;
+  z-index: 10002;
 }
 
 #recipeRamen {
   position: absolute;
   bottom: 12%;
   left: 100px;
-  z-index: 2;
+  z-index: 10002;
 }
 
 #recipePanqueca {
   position: absolute;
   bottom: 0%;
   left: 100px;
-  z-index: 2;
+  z-index: 10002;
 }
 
 #recipeOnigiri {
   position: absolute;
   bottom: 0%;
   left: 100px;
-  z-index: 2;
+  z-index: 10002;
 }
 
 #bolo {
