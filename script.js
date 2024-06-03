@@ -25,15 +25,6 @@ function preloadImages() {
 const initialText = document.getElementById("initialText");
 initialText.style.display = "none"; // Hide the text initially
 
-initialText.addEventListener('mouseover', () => {
-  initialText.classList.add('paused');
-});
-
-initialText.addEventListener('mouseout', () => {
-  initialText.classList.remove('paused');
-});
-
-
 const sombra = document.getElementById("sombra");
 sombra.style.display = "none"; // Hide the shadow initially
 
