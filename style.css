@@ -39,13 +39,14 @@
 }
 
 .fade-in-text {
-  top:5%;
+  bottom:5%;
   left:3%;
   font-family: "ghibliFont";
   position: absolute;
   font-size: 22px;
-  animation: fadeInOut 10s infinite; /* Adjust the duration as needed */
+  animation: fadeIn 2s forwards; /* Adjust the duration as needed */
   color: white;
+  z-index: 10002;
 }
 
 * {
@@ -105,9 +106,9 @@ body {
   animation: fadeIn 2s forwards;
   color: white;
   position: absolute;
-  bottom: 150px;
-  left: 1130px;
-  right: 50px;
+  bottom: 23%;
+  left: 1140px;
+  right: 3%;
   z-index: 10002;
 }
 
@@ -230,7 +231,7 @@ body {
 
 #text {
   font-family: "textFont";
-  font-size: large;
+  font-size: 16px;
   color: white;
   position: absolute;
   top: 20%;

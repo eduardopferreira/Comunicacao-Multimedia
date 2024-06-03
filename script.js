@@ -22,11 +22,20 @@ function preloadImages() {
   }
 }
 
+const logo = document.getElementById("logo");
+
+logo.addEventListener("mouseout", () => {
+  initialText.style.display = "none"; // Hide the text initially
+  sombra.style.display = "none"; // Hide the shadow initially
+});
+
 const initialText = document.getElementById("initialText");
 initialText.style.display = "none"; // Hide the text initially
 
 const sombra = document.getElementById("sombra");
 sombra.style.display = "none"; // Hide the shadow initially
+
+const fadeInText = document.querySelector(".fade-in-text");
 
 function updateOnGoing() {
   let incrementing = true;
@@ -39,8 +48,10 @@ function updateOnGoing() {
     if (incrementing) {
       currentImageIndex++;
       if (currentImageIndex === 220) {
-        initialText.style.display = "block"; // Show the text when currentImageIndex is 240
-        sombra.style.display = "block"; // Show the text when currentImageIndex is 240
+        logo.addEventListener("mouseover", () => {
+          initialText.style.display = "block"; // Show the text when currentImageIndex is 240
+          sombra.style.display = "block"; // Show the text when currentImageIndex is 240
+        });
       }
       if (currentImageIndex === imageCount2) {
         incrementing = false;
